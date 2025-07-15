@@ -16,6 +16,7 @@ jobs:
       - name: Log in to DockerHub
         run: echo "${{ secrets.DOCKERHUB_TOKEN }}" | docker login -u "${{ secrets.DOCKERHUB_USER }}" --password-stdin
 
+      
       - name: Build Docker image with build number tag
         run: |
           IMAGE_TAG=${{ github.run_number }}
